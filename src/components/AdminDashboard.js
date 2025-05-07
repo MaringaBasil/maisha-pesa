@@ -28,9 +28,9 @@ const AdminDashboard = () => {
         React.createElement('h2', null, 'User Management'),
         React.createElement('ul', { className: 'list-group' },
             users.map(user =>
-                React.createElement('li', { key: user.id, className: 'list-group-item d-flex justify-content-between align-items-center' }, // Bootstrap list item with flex
+                React.createElement('li', { key: user.id, className: 'list-group-item d-flex justify-content-between align-items-center' },
                     `${user.email} - Role: ${user.role} - KYC Verified: ${user.kycVerified ? 'Yes' : 'No'}`,
-                    !user.kycVerified && React.createElement('button', { onClick: () => handleVerifyKYC(user.id), className: 'btn btn-success btn-sm' }, 'Verify KYC') // Verify KYC button
+                    !user.kycVerified && React.createElement('button', { onClick: () => handleVerifyKYC(user.id), className: 'btn btn-success btn-sm' }, 'Verify KYC')
                 )
             )
         )

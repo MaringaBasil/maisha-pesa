@@ -11,6 +11,7 @@ import AdminDashboard from './components/AdminDashboard';
 import InvestorDashboard from './components/InvestorDashboard';
 import ContractorDashboard from './components/ContractorDashboard';
 import BrokerDashboard from './components/BrokerDashboard';
+import RevenueDistribution from './components/RevenueDistribution';
 import BackToLoginButton from './components/BackToLoginButton';
 import { useUser } from './UserContext';
 
@@ -34,7 +35,8 @@ function App() {
             React.createElement(Route, { path: "/admin", element: React.createElement(PrivateRoute, { element: React.createElement(AdminDashboard) }) }),
             React.createElement(Route, { path: "/investor", element: React.createElement(PrivateRoute, { element: React.createElement(InvestorDashboard) }) }),
             React.createElement(Route, { path: "/contractor", element: React.createElement(PrivateRoute, { element: React.createElement(ContractorDashboard) }) }),
-            React.createElement(Route, { path: "/broker", element: React.createElement(PrivateRoute, { element: React.createElement(BrokerDashboard) }) })
+            React.createElement(Route, { path: "/broker", element: React.createElement(PrivateRoute, { element: React.createElement(BrokerDashboard) }) }),
+            React.createElement(Route, { path: "/revenue-distribution", element: React.createElement(PrivateRoute, { element: React.createElement(RevenueDistribution) }) })
         ),
         location.pathname !== '/' && React.createElement(BackToLoginButton, { className: 'd-flex justify-content-end mt-3' })
     );
